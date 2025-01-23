@@ -176,19 +176,32 @@ int main() {
     displayArray(arr, n);
 
     // Insert operations
-    insertAtBeginning(arr, &n, 10, capacity);
-    printf("After inserting 10 at the beginning: ");
+    int number;
+    printf("Enter the number to insert in the beginning : ");
+    scanf("%d",&number);
+    insertAtBeginning(arr, &n, number, capacity);
+    printf("After inserting %d at the beginning: ", number);
     displayArray(arr, n);
-
-    insertAtEnd(arr, &n, 20, capacity);
-    printf("After inserting 20 at the end: ");
+    
+    int number2;
+    printf("Enter the number to insert at the end : ");
+    scanf("%d",&number2);
+    insertAtEnd(arr, &n, number2, capacity);
+    printf("After inserting %d at the end: ",number2);
     displayArray(arr, n);
-
-    insertAtPosition(arr, &n, 2, 30, capacity);
-    printf("After inserting 30 at position 2: ");
+    
+    int number3;
+    printf("Enter the position to place the element : ");
+    scanf("%d",&number3 );
+    insertAtPosition(arr, &n,number3-1, 30, capacity);
+    printf("After inserting 30 at position %d: ",number3);
     displayArray(arr, n);
 
     // Delete operations
+    deleteAtPosition(arr, &n, number3-1);
+    printf("After deleting the element at position %d: ",number3);
+    displayArray(arr, n);
+    
     deleteFirstElement(arr, &n);
     printf("After deleting the first element: ");
     displayArray(arr, n);
@@ -197,12 +210,11 @@ int main() {
     printf("After deleting the last element: ");
     displayArray(arr, n);
 
-    deleteAtPosition(arr, &n, 1);
-    printf("After deleting the element at position 1: ");
-    displayArray(arr, n);
-
     // Search operation
-    searchElement(arr, n, 30);
+    int number4;
+    printf("Enter the number to find : ");
+    scanf("%d",&number4 );
+    searchElement(arr, n,number4 );
 
     // Sorting operations
     sortArray(arr, n);
@@ -227,4 +239,3 @@ int main() {
 
     return 0;
 }
-
