@@ -13,14 +13,14 @@ int main() {
         scanf("%d", &array[i]);
     }
 
-    int array2[n];  
+    float array2[n];  
     int n2;
 
     printf("Enter window size: ");
     scanf("%d", &n2);
 
     for (int i = 0; i < n; i++) {
-        int sum = 0;
+        float sum = 0;
 
         if (i < n2) {
             for (int j = 0; j <= i; j++) {
@@ -41,7 +41,7 @@ int main() {
 
     printf("Moving average array:\n");
     for (int i = 0; i < n; i++) {
-        printf("%d\n", array2[i]);
+        printf("%f\n", array2[i]);
     }
 
     return 0;
